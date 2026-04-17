@@ -1,0 +1,62 @@
+# Technical Report: Multi-Object Detection and Tracking
+
+## 1. Introduction
+
+This project focuses on detecting and tracking multiple objects in sports video using deep learning and tracking algorithms. The goal is to maintain consistent IDs for each subject across frames.
+
+## 2. Model Used
+
+YOLOv8 (Ultralytics) is used for object detection due to its:
+
+* High speed
+* Good accuracy
+* Real-time capability
+
+## 3. Tracking Algorithm
+
+ByteTrack is used for multi-object tracking.
+
+### Why ByteTrack?
+
+* Handles occlusion effectively
+* Maintains identity consistency
+* Works well with YOLO detections
+
+## 4. Pipeline Design
+
+1. Video frames are extracted
+2. YOLOv8 detects objects
+3. ByteTrack assigns IDs
+4. Track history is stored
+5. Bounding boxes and IDs are drawn
+6. Output video is generated
+
+## 5. ID Consistency
+
+ID consistency is maintained using:
+
+* Motion prediction
+* Appearance similarity
+* Temporal tracking across frames
+
+## 6. Challenges Faced
+
+* Occlusion between players
+* Similar appearance of players
+* Fast movement
+* Camera motion
+
+## 7. Failure Cases
+
+* ID switching during heavy overlap
+* Missed detections in blur frames
+
+## 8. Improvements
+
+* Use DeepSORT for better appearance tracking
+* Add re-identification models
+* Improve role classification using ML
+
+## 9. Conclusion
+
+The system effectively tracks multiple objects with persistent IDs and performs well under moderate conditions.
