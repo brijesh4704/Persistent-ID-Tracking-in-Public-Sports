@@ -9,7 +9,7 @@ This project implements a computer vision pipeline for detecting and tracking mu
 ## 🎥 Dataset / Video Source
 
 Public cricket video used:
-(Add your YouTube link here)
+https://youtube.com/shorts/iM0MBL6jpLQ?si=DSycbjrfA6oOw5Qm
 
 ---
 
@@ -87,8 +87,7 @@ streamlit run app.py
 ---
 
 ## 📸 Output
-
-(Add screenshots here)
+asset folder
 
 ---
 
